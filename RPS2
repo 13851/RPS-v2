@@ -1,0 +1,45 @@
+import random
+p2 = random.randint(1,3)
+if p2 == 1:
+    p2 = "rock"
+elif p2 == 2:
+    p2 = "paper"
+elif p2 == 3:
+    p2 = "scissors"
+you = input("please enter your name : ")
+print("welcome to rock paper scissors")
+while True:
+    p1 = input("please enter your move : ")
+    if p1 != "rock" and p1 != "paper" and p1 != "scissors":
+        print("wrong try again !!!")
+        continue
+    print(f"{you} : {p1}")
+    print(f"cumputer : {p2}")
+    if p1 == "rock" and p2 == "rock":
+        print("draw")
+        break
+    elif p1 == "rock" and p2 =="paper":
+        print("you lose !!!")
+        break
+    elif p1 == "rock" and p2 == "scissors":
+        print(f"{you} win !!!")
+        break
+    elif p1 == "paper" and p2 == "rock":
+        print(f"{you} win !!!")
+        break
+    elif p1 == "paper" and p2 == "paper":
+        print("draw")
+        break
+    elif p1 == "paper" and p2 == "scissors":
+        print("you lose !!!")
+        break
+    elif p1 == "scissors" and p2 == "rock":
+        print("you lose !!!")
+        break
+    elif p1 == "scissors" and p2 == "paper":
+        print(f"{you} win !!!")
+        break
+    elif p1 == "scissors" and p2 == "scissors":
+        print("draw")
+        break
+# the highest version
